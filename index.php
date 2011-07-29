@@ -30,6 +30,7 @@ if(!isset($_GET['fans'])) {
 } else {
 	$response = (int) $_GET['fans'];
 }
-?><p>Η ομάδα του DeltaHacker έχει <span style="font-weight:bold;font-size:25px;"><?php echo $response; ?></span> οπαδούς, δηλαδή <span style="font-size:15px;">2^<span  style="font-weight:bold;font-size:25px;"><?php echo log($response,2)/*log_2(f)*/ ?></span></p>
+?><p>Η ομάδα του DeltaHacker έχει <span style="font-weight:bold;font-size:25px;"><?php echo $response; ?></span> οπαδούς, δηλαδή <span style="font-size:15px;">2^<span  style="font-weight:bold;font-size:25px;"><?php echo log($response,2)/*log_2(f)*/ ?></span>.</p>
 <p>Για να φτάσουμε τους 2^<b><?php echo (int) log($response,2)+1; ?></b> οπαδούς χρειαζόμαστε <?php echo pow(2,(int)log($response,2)+1); ?> άτομα, δηλαδή άλλους <?php echo (int) pow(2,(int)log($response,2)+1)-$response; ?>.</p>
+<p>Για τον τελικό στόχο των 2^12.288 (<?php echo pow(2,12.2877); ?>) θα πρέπει να αποκτήσουμε <?php echo pow(2,12.2877)-$response ?> περισσότερα άτομα που θα κάνουν like.</p>.
 </body></html>
