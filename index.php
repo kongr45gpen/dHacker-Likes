@@ -7,7 +7,26 @@ header('Content-Type','text/html; charset=utf-8'); //Για να βγαίνου�
 <title>DeltaHacker Facebook Likes</title>
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
   {lang: 'el'}
-</script>
+</script><style type="text/css">
+h1 {
+	background-color: black;
+	padding: 4px;
+	color: lime;
+	float: left;
+	margin: 5px;
+	border-radius: 5px;
+}
+.mlink {
+	color: inherit;
+	text-decoration: none;
+}
+.mlink:hover, .mlink:hover span {
+	text-decoration: underline;
+}
+.mlink:active {
+	  text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+</style>
 </head>
 <body><?php
 
@@ -35,10 +54,11 @@ if(!isset($_GET['fans'])) {
 } else {
 	$response = (int) $_GET['fans'];
 }
-?><h1>d3lta H@ck3<span style="-moz-transform: scale(-1, 1);-webkit-transform: scale(-1, 1);-o-transform: scale(-1, 1);transform: scale(-1, 1);">R</span></h1>
-<p>Η ομάδα του DeltaHacker έχει <span style="font-weight:bold;font-size:25px;"><?php echo $response; ?></span> οπαδούς, δηλαδή <span style="font-size:15px;">2^</span><span  style="font-weight:bold;font-size:25px;"><?php echo log($response,2)/*log_2(f)*/ ?></span>.</p>
+?><h1><a href="http://deltahacker.gr/" class="mlink">d3lta H@ck3<span style="-moz-transform: scale(-1, 1);-webkit-transform: scale(-1, 1);-o-transform: scale(-1, 1);transform: scale(-1, 1);display:inline-block;">R</span></a></h1>
+<p><a href="http://facebook.com/deltaHacker">Η ομάδα του DeltaHacker</a> έχει <span style="font-weight:bold;font-size:25px;"><?php echo $response; ?></span> οπαδούς, δηλαδή <span style="font-size:15px;">2^</span><span  style="font-weight:bold;font-size:25px;"><?php echo log($response,2)/*log_2(f)*/ ?></span>.</p>
 <p>Για να φτάσουμε τους 2^<b><?php echo (int) log($response,2)+1; ?></b> οπαδούς χρειαζόμαστε <?php echo pow(2,(int)log($response,2)+1); ?> άτομα, δηλαδή άλλους <?php echo (int) pow(2,(int)log($response,2)+1)-$response; ?>.</p>
 <p>Ένας εφικτός στόχος είναι οι 2^<?php echo log(2000,2); ?> (2000), δηλαδή άλλα <?php echo 2000-$response ?> άτομα.</p>
 <p>Για τον τελικό στόχο των 2^12.288 (<?php echo pow(2,12.2877); ?>) θα πρέπει να αποκτήσουμε <?php echo pow(2,12.2877)-$response ?> περισσότερα άτομα που θα κάνουν like.</p>
-<p><h2>Δείξτε ενδιαφέρον στο DeltaHacker</h2><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FdeltaHacker&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:25px;" allowTransparency="true"></iframe><g:plusone size="medium" href="http://www.deltahacker.gr/"></g:plusone></p>
+<h2>Δείξτε ενδιαφέρον στο DeltaHacker</h2><p><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FdeltaHacker&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=30" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:30px;" allowTransparency="true"></iframe><g:plusone size="medium" href="http://www.deltahacker.gr/"></g:plusone>
+</p>
 </body></html>
