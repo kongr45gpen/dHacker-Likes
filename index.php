@@ -5,9 +5,7 @@ header('Content-Type','text/html; charset=utf-8'); //Για να βγαίνου�
 <!DOCTYPE html>
 <html><head>
 <title>DeltaHacker Facebook Likes</title>
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-  {lang: 'el'}
-</script><style type="text/css">
+<style type="text/css">
 h1 {
 	background-color: black;
 	padding: 4px;
@@ -59,6 +57,6 @@ if(!isset($_GET['fans'])) {
 <p>Για να φτάσουμε τους 2^<b><?php echo (int) log($response,2)+1; ?></b> οπαδούς χρειαζόμαστε <?php echo pow(2,(int)log($response,2)+1); ?> άτομα, δηλαδή άλλους <?php echo (int) pow(2,(int)log($response,2)+1)-$response; ?>.</p>
 <p>Ένας εφικτός στόχος είναι οι 2^<?php echo log(2000,2); ?> (2000), δηλαδή άλλα <?php echo 2000-$response ?> άτομα.</p>
 <p>Για τον τελικό στόχο των 2^12.288 (<?php echo pow(2,12.2877); ?>) θα πρέπει να αποκτήσουμε <?php echo pow(2,12.2877)-$response ?> περισσότερα άτομα που θα κάνουν like.</p>
-<h2>Δείξτε ενδιαφέρον στο DeltaHacker</h2><p><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FdeltaHacker&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=30" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:30px;" allowTransparency="true"></iframe><g:plusone size="medium" href="http://www.deltahacker.gr/"></g:plusone>
+<h2>Δείξτε ενδιαφέρον στο DeltaHacker</h2><p><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FdeltaHacker&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=30" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:30px;" allowTransparency="true"></iframe>
 </p>
 </body></html>
