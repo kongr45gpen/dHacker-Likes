@@ -28,7 +28,7 @@ h1 {
 </head>
 <body><?php
 
-define('OPEN','placePageStats\\">\\u003cdiv>\\u003cspan class=\\"uiNumberGiant fsxxl fwb\\">'); //Το τμήμα κώδικα ακριβώς πριν τον αριθμό των φαν
+define('OPEN','class=\\"placePageStatsNumber\\">'); //Το τμήμα κώδικα ακριβώς πριν τον αριθμό των φαν
 
 if(!isset($_GET['fans'])) {
 	$url='http://www.facebook.com/deltaHacker';
