@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 ini_set('precision','5'); //Όχι στα μακροσκελή νούμερα!
 header('Content-Type','text/html; charset=utf-8'); //Για να βγαίνουν τα ελληνικά
 ?>
@@ -28,7 +28,7 @@ h1 {
 </head>
 <body><?php
 
-define('OPEN','class=\\"placePageStatsNumber\\">'); //Το τμήμα κώδικα ακριβώς πριν τον αριθμό των φαν
+define('OPEN','uiNumberGiant fsxxl fwb">'); //Το τμήμα κώδικα ακριβώς πριν τον αριθμό των φαν
 
 if(!isset($_GET['fans'])) {
 	$url='http://www.facebook.com/deltaHacker';
@@ -57,6 +57,6 @@ if(!isset($_GET['fans'])) {
 <p>Για να φτάσουμε τους 2^<b><?php echo (int) log($response,2)+1; ?></b> οπαδούς χρειαζόμαστε <?php echo pow(2,(int)log($response,2)+1); ?> άτομα, δηλαδή άλλους <?php echo (int) pow(2,(int)log($response,2)+1)-$response; ?>.</p>
 <p>Ένας εφικτός στόχος είναι οι 2^<?php echo log(2000,2); ?> (2000), δηλαδή άλλα <?php echo 2000-$response ?> άτομα.</p>
 <p>Για τον τελικό στόχο των 2^12.288 (<?php echo pow(2,12.2877); ?>) θα πρέπει να αποκτήσουμε <?php echo pow(2,12.2877)-$response ?> περισσότερα άτομα που θα κάνουν like.</p>
-<h2>Δείξτε ενδιαφέρον στο DeltaHacker</h2><p><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FdeltaHacker&amp;send=false&amp;layout=standard&amp;width=650&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=30" style="border:none; overflow:hidden; width:650px; height:30px;"></iframe>
+<h2>Δείξτε ενδιαφέρον στο DeltaHacker</h2><p><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FdeltaHacker&amp;send=false&amp;layout=standard&amp;width=650&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=30" style="border:none; overflow:hidden; width:650px; height:28px;"></iframe>
 </p>
 </body></html>
