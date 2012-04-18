@@ -28,7 +28,7 @@ h1 {
 </head>
 <body><?php
 
-define('OPEN','uiNumberGiant fsxxl fwb">'); //Το τμήμα κώδικα ακριβώς πριν τον αριθμό των φαν
+define('OPEN','<td class="vMid hCent"><span class="tlTxHf stats fwb">'); //Το τμήμα κώδικα ακριβώς πριν τον αριθμό των φαν
 
 if(!isset($_GET['fans'])) {
 	$url='http://www.facebook.com/deltaHacker';
@@ -45,7 +45,7 @@ if(!isset($_GET['fans'])) {
 	}
 	$response = explode(OPEN,$response); //Χωρίζουμε το μέρος πριν από τη σταθερά OPEN από τον κώδικα μετά από αυτήν
 	$response = $response[1];
-	$response = explode('\\',$response); //Κρατάμε μόνο το νούμερο και πετάμε οτιδήποτε μετά από το \
+	$response = explode('<',$response); //Κρατάμε μόνο το νούμερο και πετάμε οτιδήποτε μετά από το <
 	$response = $response[0];
 	$response = preg_replace('/[^0-9]/', '', $response); //Κρατάμε μόνο τους αριθμούς και όχι το κόμμα/την τελεία
 	$response = (int) $response;
@@ -55,7 +55,7 @@ if(!isset($_GET['fans'])) {
 ?><h1><a href="http://deltahacker.gr/" class="mlink">d3lta H@ck3<span style="-moz-transform: scale(-1, 1);-webkit-transform: scale(-1, 1);-o-transform: scale(-1, 1);transform: scale(-1, 1);display:inline-block;">R</span></a></h1>
 <p><a href="http://facebook.com/deltaHacker">Η ομάδα του DeltaHacker</a> έχει <span style="font-weight:bold;font-size:25px;"><?php echo $response; ?></span> οπαδούς, δηλαδή <span style="font-size:15px;">2^</span><span  style="font-weight:bold;font-size:25px;"><?php echo log($response,2)/*log_2(f)*/ ?></span>.</p>
 <p>Για να φτάσουμε τους 2^<b><?php echo (int) log($response,2)+1; ?></b> οπαδούς χρειαζόμαστε <?php echo pow(2,(int)log($response,2)+1); ?> άτομα, δηλαδή άλλους <?php echo (int) pow(2,(int)log($response,2)+1)-$response; ?>.</p>
-<p>Ένας εφικτός στόχος είναι οι 2^<?php echo log(2000,2); ?> (2000), δηλαδή άλλα <?php echo 2000-$response ?> άτομα.</p>
+<p>Ένας εφικτός στόχος είναι οι 2^<?php echo log(4000,2); ?> (4000), δηλαδή άλλα <?php echo 4000-$response ?> άτομα.</p>
 <p>Για τον τελικό στόχο των 2^12.288 (<?php echo pow(2,12.2877); ?>) θα πρέπει να αποκτήσουμε <?php echo pow(2,12.2877)-$response ?> περισσότερα άτομα που θα κάνουν like.</p>
 <h2>Δείξτε ενδιαφέρον στο DeltaHacker</h2><p><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FdeltaHacker&amp;send=false&amp;layout=standard&amp;width=650&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=30" style="border:none; overflow:hidden; width:650px; height:28px;"></iframe>
 </p>
